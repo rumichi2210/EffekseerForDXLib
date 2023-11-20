@@ -265,6 +265,30 @@ int LoadEffekseerEffect(const char* fileName, float magnification = 1.0f);
 int LoadEffekseerEffect(const wchar_t* fileName, float magnification = 1.0f);
 
 /**
+	@brief	Effekseerのエフェクトリソースをメモリ上に展開する。
+	@param	fileName	efkファイルへのパス
+	@note	CreateEffekseerEffectを使用してエフェクトリソースのハンドルを作成する。
+	@return	-1以外:メモリー上に展開したハンドル、-1:失敗
+*/
+int LoadEffekseerEffectFile(const char* fileName);
+
+/**
+	@brief	Effekseerのエフェクトリソースをメモリ上に展開する。
+	@param	fileName	efkファイルへのパス
+	@note	CreateEffekseerEffectを使用してエフェクトリソースのハンドルを作成する。
+	@return	-1以外:メモリー上に展開したハンドル、-1:失敗
+*/
+int LoadEffekseerEffectFile(const wchar_t* fileName);
+
+/**
+	@brief	Effekseerのエフェクトリソースをメモリ上から読み込み作成する。
+	@param	fileName	メモリー上に展開されたハンドル
+	@param	magnification	拡大率、指定された値に拡大する。
+	@return	-1以外:エフェクトリソースのハンドル、-1:失敗
+*/
+int CreateEffekseerEffect(int mem_Handl, float magnification = 1.0f);
+
+/**
 	@brief	メモリ上からEffekseerのエフェクトリソースを削除する。
 	@param	effectHandle	エフェクトリソースのハンドル
 	@return	0:成功、-1:失敗

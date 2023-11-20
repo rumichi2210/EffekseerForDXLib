@@ -648,6 +648,21 @@ int LoadEffekseerEffect(const wchar_t* fileName, float magnification)
 	return handle;
 }
 
+int LoadEffekseerEffectFile(const char* fileName)
+{
+	const auto fileName_ = ToWide(fileName);
+	return LoadEffekseerEffectFile(fileName_.c_str());
+}
+
+int LoadEffekseerEffectFile(const wchar_t* fileName)
+{
+}
+
+int CreateEffekseerEffect(int mem_Handl, float magnification)
+{
+
+}
+
 int DeleteEffekseerEffect(int effectResourceHandle)
 {
 	if (effectHandleToEffectFileName.count(effectResourceHandle) > 0)
